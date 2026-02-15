@@ -5,44 +5,46 @@ const About = () => {
     const { about } = content;
 
     return (
-        <section id="about" className="py-20 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="about" className="py-24 bg-navy-900 relative overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                    <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-100 mb-6">
                         {about.title}
                     </h2>
-                    <div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
+                    <div className="w-24 h-1 bg-indigo-600 mx-auto rounded-full"></div>
                 </div>
 
-                <div className="flex flex-col md:flex-row items-center gap-12">
+                <div className="flex flex-col md:flex-row items-center gap-16">
                     {/* Illustration/Image placeholder */}
                     <div className="w-full md:w-1/2 flex justify-center">
-                        <div className="relative">
-                            <div className="absolute -inset-4 bg-indigo-100 rounded-full blur-2xl opacity-50 animate-pulse"></div>
-                            <div className="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 relative z-10 grid grid-cols-2 gap-4">
-                                <div className="p-4 bg-blue-50 rounded-xl text-center">
-                                    <Cpu className="text-blue-600 mx-auto mb-2" size={32} />
-                                    <span className="text-sm font-semibold text-slate-700">AI Prototypes</span>
+                        <div className="relative group">
+                            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-indigo-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                            <div className="relative bg-navy-800 p-8 rounded-2xl border border-white/10 grid grid-cols-2 gap-6 hover:shadow-2xl transition-all duration-300">
+                                <div className="p-6 bg-navy-900/50 rounded-xl text-center border border-white/5 hover:border-cyan-500/30 transition-colors">
+                                    <Cpu className="text-cyan-400 mx-auto mb-3" size={32} />
+                                    <span className="text-sm font-semibold text-slate-300">AI Prototypes</span>
                                 </div>
-                                <div className="p-4 bg-purple-50 rounded-xl text-center">
-                                    <Code className="text-purple-600 mx-auto mb-2" size={32} />
-                                    <span className="text-sm font-semibold text-slate-700">Clean Code</span>
+                                <div className="p-6 bg-navy-900/50 rounded-xl text-center border border-white/5 hover:border-purple-500/30 transition-colors">
+                                    <Code className="text-purple-400 mx-auto mb-3" size={32} />
+                                    <span className="text-sm font-semibold text-slate-300">Clean Code</span>
                                 </div>
-                                <div className="p-4 bg-green-50 rounded-xl text-center col-span-2">
-                                    <Globe className="text-green-600 mx-auto mb-2" size={32} />
-                                    <span className="text-sm font-semibold text-slate-700">Scalable Solutions</span>
+                                <div className="p-6 bg-navy-900/50 rounded-xl text-center col-span-2 border border-white/5 hover:border-indigo-500/30 transition-colors">
+                                    <Globe className="text-indigo-400 mx-auto mb-3" size={32} />
+                                    <span className="text-sm font-semibold text-slate-300">Scalable Solutions</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="w-full md:w-1/2">
-                        <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                            Passion for <span className="text-indigo-600">Innovation</span>
+                        <h3 className="text-3xl font-bold text-slate-100 mb-6">
+                            Passion for <span className="text-gradient">Innovation</span>
                         </h3>
-                        <p className="text-lg text-slate-600 leading-relaxed bg-slate-50 p-6 rounded-xl border border-slate-100 shadow-sm">
-                            {about.description}
-                        </p>
+                        <div className="space-y-6 text-lg text-slate-400 leading-relaxed">
+                            <div className="bg-navy-800/30 p-8 rounded-2xl border border-white/5 shadow-inner">
+                                {about.description}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

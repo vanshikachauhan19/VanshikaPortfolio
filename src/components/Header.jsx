@@ -47,24 +47,26 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled || isOpen ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-white/90 backdrop-blur-md shadow-sm'
+            className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent ${isScrolled || isOpen ? 'nav-blur' : 'bg-transparent'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                    <Link to="/" className="flex items-center space-x-2 text-indigo-600 font-bold text-xl">
-                        <Code2 size={28} />
-                        <span>Vanshika.dev</span>
+                    <Link to="/" className="flex items-center space-x-2 group">
+                        <div className="p-1.5 rounded-lg bg-indigo-500/10 group-hover:bg-indigo-500/20 transition-colors">
+                            <Code2 size={24} className="text-cyan-400" />
+                        </div>
+                        <span className="font-display font-bold text-xl tracking-tight text-slate-100 group-hover:text-cyan-400 transition-colors">Vanshika<span className="text-indigo-500">.dev</span></span>
                     </Link>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden md:flex space-x-8">
+                    <nav className="hidden md:flex space-x-1">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.href}
                                 onClick={(e) => handleNavClick(e, link.href)}
-                                className="text-gray-700 hover:text-indigo-600 font-medium transition-colors cursor-pointer"
+                                className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-cyan-400 hover:bg-white/5 rounded-full transition-all duration-300 cursor-pointer"
                             >
                                 {link.name}
                             </a>
@@ -73,7 +75,7 @@ const Header = () => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden text-gray-700 focus:outline-none"
+                        className="md:hidden text-slate-300 hover:text-white focus:outline-none p-2"
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -83,13 +85,13 @@ const Header = () => {
 
             {/* Mobile Nav */}
             {isOpen && (
-                <div className="md:hidden bg-white shadow-lg absolute w-full">
-                    <div className="px-4 pt-2 pb-4 space-y-2">
+                <div className="md:hidden bg-navy-900/95 backdrop-blur-xl border-b border-white/10 absolute w-full">
+                    <div className="px-4 pt-2 pb-6 space-y-2">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md font-medium cursor-pointer"
+                                className="block px-4 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors cursor-pointer"
                                 onClick={(e) => handleNavClick(e, link.href)}
                             >
                                 {link.name}

@@ -17,7 +17,7 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-navy-900 text-slate-300 selection:bg-cyan-400/30 selection:text-cyan-200">
       <ScrollToTop />
       <Header />
       <Routes>
