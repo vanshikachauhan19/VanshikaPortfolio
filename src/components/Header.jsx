@@ -56,7 +56,7 @@ const Header = () => {
                         <div className="p-1.5 rounded-lg bg-indigo-500/10 group-hover:bg-indigo-500/20 transition-colors">
                             <Code2 size={24} className="text-cyan-400" />
                         </div>
-                        <span className="font-display font-bold text-xl tracking-tight text-slate-100 group-hover:text-cyan-400 transition-colors">Vanshika<span className="text-indigo-500">.dev</span></span>
+                        <span className="font-display font-bold text-xl tracking-tight text-slate-100 group-hover:text-cyan-400 transition-colors">Vanshika <span className="text-indigo-500">Chauhan</span></span>
                     </Link>
 
                     {/* Desktop Nav */}
