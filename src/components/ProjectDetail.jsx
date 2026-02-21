@@ -77,6 +77,57 @@ const ProjectDetail = () => {
                                                     </span>
                                                 ))}
                                             </div>
+                                        ) : section.type === 'gallery' && section.images ? (
+                                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                                {section.images.map((image, i) => (
+                                                    <div key={i} className="group relative">
+                                                        <div className="aspect-video rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+                                                            <img
+                                                                src={image.src}
+                                                                alt={image.alt}
+                                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                            />
+                                                        </div>
+                                                        <p className="mt-2 text-sm text-slate-500 text-center">{image.alt}</p>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        ) : section.type === 'case-study-results' ? (
+                                            <div className="space-y-12">
+                                                {/* Main Prominent Image */}
+                                                {section.mainImage && (
+                                                    <div className="flex flex-col items-center">
+                                                        <div className="w-full max-w-4xl group transition-transform duration-300 hover:scale-[1.02]">
+                                                            <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white">
+                                                                <img
+                                                                    src={section.mainImage.src}
+                                                                    alt={section.mainImage.alt}
+                                                                    className="w-full h-auto"
+                                                                />
+                                                            </div>
+                                                            <p className="mt-4 text-center text-slate-500 font-medium">{section.mainImage.alt}</p>
+                                                        </div>
+                                                    </div>
+                                                )}
+
+                                                {/* Responsive Grid for other images */}
+                                                {section.gridImages && (
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                                        {section.gridImages.map((image, i) => (
+                                                            <div key={i} className="group transition-transform duration-300 hover:scale-[1.03]">
+                                                                <div className="rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white aspect-auto">
+                                                                    <img
+                                                                        src={image.src}
+                                                                        alt={image.alt}
+                                                                        className="w-full h-auto"
+                                                                    />
+                                                                </div>
+                                                                <p className="mt-3 text-sm text-slate-500 text-center font-medium">{image.alt}</p>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </div>
                                         ) : section.items ? (
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                                 {section.items.map((item, i) => (

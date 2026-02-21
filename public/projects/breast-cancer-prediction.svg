@@ -1,0 +1,18 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#f8fafc"/>
+  <rect x="100" y="100" width="600" height="400" rx="20" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+  <path d="M150 200H650" stroke="#e2e8f0" stroke-width="2" stroke-linecap="round"/>
+  <path d="M150 250H650" stroke="#f1f5f9" stroke-width="2" stroke-linecap="round"/>
+  <path d="M150 300H650" stroke="#f1f5f9" stroke-width="2" stroke-linecap="round"/>
+  <path d="M150 350H650" stroke="#f1f5f9" stroke-width="2" stroke-linecap="round"/>
+  
+  <rect x="150" y="150" width="80" height="20" rx="4" fill="#6366f1" fill-opacity="0.1"/>
+  <rect x="250" y="150" width="120" height="20" rx="4" fill="#6366f1" fill-opacity="0.1"/>
+  
+  <circle cx="400" cy="300" r="100" fill="#6366f1" fill-opacity="0.05"/>
+  <path d="M350 300C350 272.386 372.386 250 400 250C427.614 250 450 272.386 450 300C450 327.614 427.614 350 400 350C372.386 350 350 327.614 350 300Z" fill="#6366f1" fill-opacity="0.1"/>
+  <path d="M380 300L395 315L425 285" stroke="#6366f1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <text x="400" y="450" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#1e293b">Breast Cancer Prediction</text>
+  <text x="400" y="480" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#64748b">Machine Learning Classification</text>
+</svg>

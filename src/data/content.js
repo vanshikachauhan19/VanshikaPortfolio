@@ -171,7 +171,7 @@ export const content = {
             ],
             challenges: "Ensuring sensor reliability against environmental interference. Implemented signal debouncing and calibration code for stability.",
             tech: ["IoT", "Arduino", "C++", "Sensors", "ESP8266"],
-            github: "https://github.com/vanshikachauhan19",
+            github: "https://github.com/vanshikauhan19",
             demo: "#",
             video: "https://drive.google.com/file/d/12vxOBf7ffH4ui5925ScCWXNLnm3z8SC6/preview",
             image: "/projects/smart-parking.svg",
@@ -209,6 +209,80 @@ export const content = {
                 {
                     title: "Conclusion",
                     content: "This project demonstrates the effective application of IoT in urban infrastructure. By automating parking management, it provides a scalable and cost-effective solution that can be integrated into larger smart city ecosystems."
+                }
+            ]
+        },
+        {
+            id: 6,
+            slug: "breast-cancer-prediction",
+            title: "Breast Cancer Prediction using Machine Learning",
+            summary: "A reliable and accurate prediction system to assist in early detecton of breast cancer using machine learning.",
+            description: "Developed a supervised machine learning model to classify breast tumors as malignant or benign using clinical diagnostic features. The objective was to build a reliable and accurate prediction system to assist in early cancer detection.",
+            problem: "Detecting breast cancer at an early stage is critical for patient survival, yet manual diagnosis can be complex and prone to variance in clinical interpretation.",
+            solution: "Developed an automated classification system using clinical diagnostic features, leveraging the Random Forest algorithm to provide high-accuracy screening assistance.",
+            features: [
+                "Data preprocessing and feature selection",
+                "Train-test split (80-20 ratio)",
+                "Model comparison and performance evaluation",
+                "Confusion matrix visualization",
+                "Feature importance analysis"
+            ],
+            challenges: "Achieving high sensitivity to minimize false negatives, ensuring that potential malignancies are not overlooked by the model.",
+            tech: ["Python", "NumPy", "Pandas", "Scikit-learn", "Matplotlib", "Seaborn"],
+            github: "https://github.com/vanshikachauhan19/Breast-Cancer-Prediction-ML",
+            demo: "#",
+            tags: ["Machine Learning", "Classification", "Random Forest", "Healthcare AI", "Python"],
+            image: "/public/projects/breast-cancer-prediction.svg",
+            detailedSections: [
+                {
+                    title: "Project Overview",
+                    content: "Developed a supervised machine learning model to classify breast tumors as malignant or benign using clinical diagnostic features. The objective was to build a reliable and accurate prediction system to assist in early cancer detection."
+                },
+                {
+                    title: "Model Details",
+                    content: "Implemented and compared multiple classification algorithms including Logistic Regression, Decision Tree, and Random Forest. Based on performance evaluation, Random Forest was selected as the best-performing model."
+                },
+                {
+                    title: "Results",
+                    items: [
+                        "Training Accuracy: 100%",
+                        "Testing Accuracy: 96.49%",
+                        "Strong generalization performance",
+                        "Minimal false negatives (critical in medical diagnosis)",
+                        "Evaluated using Confusion Matrix, Precision, Recall, and F1-score"
+                    ]
+                },
+                {
+                    title: "Project Results & Visualizations",
+                    type: "case-study-results",
+                    mainImage: {
+                        src: "/images/confusion-matrix.png",
+                        alt: "Confusion Matrix – Model Performance Visualization"
+                    },
+                    gridImages: [
+                        {
+                            src: "/images/classification-report.png",
+                            alt: "Classification Report – Precision, Recall, F1 Score"
+                        },
+                        {
+                            src: "/images/model-results.png",
+                            alt: "Model Results – Training vs Testing Accuracy"
+                        }
+                    ]
+                },
+                {
+                    title: "Key Features",
+                    items: [
+                        "Data preprocessing and feature selection",
+                        "Train-test split (80-20 ratio)",
+                        "Model comparison and performance evaluation",
+                        "Confusion matrix visualization",
+                        "Feature importance analysis"
+                    ]
+                },
+                {
+                    title: "Conclusion",
+                    content: "The Random Forest model demonstrated exceptional performance with 96.49% testing accuracy. By minimizing false negatives, the system serves as a powerful diagnostic aid, showcasing the potential of AI in clinical healthcare."
                 }
             ]
         }
