@@ -232,7 +232,7 @@ export const content = {
             github: "https://github.com/vanshikachauhan19/Breast-Cancer-Prediction-ML",
             demo: "#",
             tags: ["Machine Learning", "Classification", "Random Forest", "Healthcare AI", "Python"],
-            image: "/public/projects/breast-cancer-prediction.svg",
+            image: "/images/breast-cancer-bg.png",
             detailedSections: [
                 {
                     title: "Project Overview",

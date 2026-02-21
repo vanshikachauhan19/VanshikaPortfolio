@@ -41,19 +41,24 @@ const ProjectDetail = () => {
                 </Link>
 
                 {/* Hero Section */}
-                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden mb-8">
-                    <div className="h-64 md:h-96 relative">
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden mb-8 relative">
+                    <div className="h-64 md:h-[450px] relative">
                         {project.image && (
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover object-center"
                             />
                         )}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                        <div className="absolute bottom-0 left-0 p-8 md:p-12 text-white">
-                            <h1 className="text-3xl md:text-5xl font-bold mb-4">{project.title}</h1>
-                            <p className="text-lg md:text-xl text-slate-200 max-w-3xl">{project.summary}</p>
+                        {/* Dark Overlay (60% Opacity) */}
+                        <div className="absolute inset-0 bg-black/60 transition-opacity duration-300"></div>
+
+                        {/* Text Content */}
+                        <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 text-white z-10">
+                            <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-md">{project.title}</h1>
+                            <p className="text-lg md:text-xl text-slate-100 max-w-3xl drop-shadow-sm font-medium">
+                                {project.summary}
+                            </p>
                         </div>
                     </div>
                 </div>
